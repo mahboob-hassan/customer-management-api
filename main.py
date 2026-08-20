@@ -8,3 +8,7 @@ app.include_router(customers.router)
 @app.get('/')
 def read_root():
     return {"message": "Customer API is running"}
+
+@app.get('/health')
+def health_check():
+    return {"status" : "healthy"}

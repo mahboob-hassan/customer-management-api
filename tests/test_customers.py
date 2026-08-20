@@ -3,6 +3,14 @@ from main import app
 
 client = TestClient(app)
 
+<<<<<<< Updated upstream
+=======
+def test_health_check():
+    response = client.get("/health")
+    assert response.status_code == 200
+    assert response.json()["status"] == "healthy"
+
+>>>>>>> Stashed changes
 def test_get_customers():
     response = client.get("/customers/")
     assert response.status_code == 200
