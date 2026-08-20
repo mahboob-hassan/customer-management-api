@@ -8,7 +8,7 @@ def get_customer(customer_id: int):
     for customer in customers:
         if customer["id"] == customer_id:
             return customer
-    return {"error": "Customer not found"}
+    return None
 
 def create_customer(customer: Customer):
     new_id = len(customers) + 1
