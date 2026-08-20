@@ -12,7 +12,7 @@ def test_health_check():
 def test_get_customers():
     response = client.get("/customers/")
     assert response.status_code == 200
-    assert isinstance(response.json(), list)
+    assert isinstance(response.json(), dict)
 
 def test_get_customer_found():
     response = client.get("/customers/1")
