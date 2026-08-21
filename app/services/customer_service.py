@@ -1,5 +1,5 @@
 from app.data.customers import customers
-from app.models.customer import Customer
+from app.models.customer import CustomerCreate
 
 def get_all_customers():
     return customers
@@ -10,7 +10,7 @@ def get_customer(customer_id: int):
             return customer
     return None
 
-def create_customer(customer: Customer):
+def create_customer(customer: CustomerCreate):
     new_id = len(customers) + 1
     new_customer = customer.model_dump()
     new_customer["id"] = new_id
